@@ -1,6 +1,4 @@
-# Maven Repository Browser
-
-![Maven Repository](public/favicon.svg)
+# Fireboom Maven Repository
 
 A beautiful, Reposilite-style Maven repository browser powered by GitHub Pages and Astro.
 
@@ -38,8 +36,8 @@ pnpm run build
    Edit `astro.config.mjs`:
    ```javascript
    export default defineConfig({
-     site: 'https://yourusername.github.io',
-     base: '/repository-name'
+     site: 'https://settingdust.github.io',
+     base: '/maven'
    });
    ```
 
@@ -75,7 +73,7 @@ See [Gradle Publishing Guide](docs/PUBLISH_GUIDE.md) for setting up automated pu
 ### Gradle (Kotlin)
 ```kotlin
 repositories {
-    maven("https://yourusername.github.io/repo-name/repository")
+    maven("https://settingdust.github.io/maven/repository")
 }
 
 dependencies {
@@ -86,7 +84,7 @@ dependencies {
 ### Gradle (Groovy)
 ```groovy
 repositories {
-    maven "https://yourusername.github.io/repo-name/repository"
+    maven "https://settingdust.github.io/maven/repository"
 }
 
 dependencies {
@@ -98,8 +96,8 @@ dependencies {
 ```xml
 <repositories>
     <repository>
-        <id>github-maven</id>
-        <url>https://yourusername.github.io/repo-name/repository</url>
+        <id>settingdust-maven</id>
+        <url>https://settingdust.github.io/maven/repository</url>
     </repository>
 </repositories>
 
