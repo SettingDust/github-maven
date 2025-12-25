@@ -1,17 +1,26 @@
+---
+interface Props {
+  title?: string;
+  siteName?: string;
+}
+
+const { title = 'SettingDust\'s Maven', siteName = 'SettingDust\'s Maven' } = Astro.props;
+---
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maven Repository</title>
+    <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
     <header class="site-header">
         <div class="header-container">
             <a href="/" class="logo-link">
-                <img src="/favicon.svg" alt="Maven Repository" class="logo">
-                <span class="site-title">Maven Repository</span>
+                <img src="/favicon.svg" alt={siteName} class="logo">
+                <span class="site-title">{siteName}</span>
             </a>
         </div>
     </header>

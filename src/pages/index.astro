@@ -110,7 +110,7 @@ function scanMavenRepository(baseDir: string): Artifact[] {
 const repositoryPath = path.join(process.cwd(), 'repository');
 const artifacts = scanMavenRepository(repositoryPath);
 const baseUrl = import.meta.env.BASE_URL || '/';
-const siteUrl = import.meta.env.SITE || 'https://your-repo.github.io/';
+const siteUrl = import.meta.env.SITE || 'https://example.github.io/';
 
 // Build a directory tree structure
 interface TreeNode {
