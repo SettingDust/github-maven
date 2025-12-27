@@ -66,12 +66,30 @@ function scanMavenRepository(baseDir: string): Artifact[] {
                     // Sort files by type priority, then alphabetically
                     const getPriority = (name: string) => {
                       if (name.endsWith('.pom')) return 1;
-                      if (name.endsWith('.jar') && !name.includes('-sources') && !name.includes('-javadoc')) return 2;
-                      if (name.includes('-sources.jar')) return 3;
-                      if (name.includes('-javadoc.jar')) return 4;
-                      if (name.endsWith('.sha1')) return 5;
-                      if (name.endsWith('.md5')) return 6;
-                      return 7;
+                      
+                      // Check if it's a jar file
+                      if (name.endsWith('.jar')) {
+                        // Extract base name without extension
+                        const baseName = name.slice(0, -4); // Remove .jar
+                        const parts = baseName.split('-');
+                        
+                        // Main jar: matches pattern artifactId-version.jar (no classifier)
+                        // If last part is version number (contains dots), it's main jar
+                        if (parts.length >= 2 && parts[parts.length - 1].match(/^\d+(\.\d+)*$/)) {
+                          return 2; // Main jar without classifier
+                        }
+                        
+                        // Check for common classifiers
+                        if (name.includes('-sources.jar')) return 3;
+                        if (name.includes('-javadoc.jar')) return 4;
+                        
+                        // Other jars with classifiers (native, linux, windows, etc.)
+                        return 5;
+                      }
+                      
+                      if (name.endsWith('.sha1')) return 6;
+                      if (name.endsWith('.md5')) return 7;
+                      return 8;
                     };
                     const priorityDiff = getPriority(a.name) - getPriority(b.name);
                     if (priorityDiff !== 0) return priorityDiff;
