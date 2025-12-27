@@ -51,6 +51,9 @@ function scanMavenRepository(baseDir: string): Artifact[] {
             const versionFiles = new Map<string, {name: string; size: number}[]>();
             versionDirs.forEach(versionDir => {
               const versionPath = path.join(currentPath, versionDir.name);
+              const version = versionDir.name;
+              const artifactId = item.name;
+              
               try {
                 const files = fs.readdirSync(versionPath, { withFileTypes: true })
                   .filter(f => f.isFile())
@@ -64,26 +67,19 @@ function scanMavenRepository(baseDir: string): Artifact[] {
                   })
                   .sort((a, b) => {
                     // Sort files by type priority, then alphabetically
+                    const mainJarName = `${artifactId}-${version}.jar`;
+                    
                     const getPriority = (name: string) => {
                       if (name.endsWith('.pom')) return 1;
                       
+                      // Check if it's the main jar (exact match)
+                      if (name === mainJarName) return 2;
+                      
                       // Check if it's a jar file
                       if (name.endsWith('.jar')) {
-                        // Extract base name without extension
-                        const baseName = name.slice(0, -4); // Remove .jar
-                        const parts = baseName.split('-');
-                        
-                        // Main jar: matches pattern artifactId-version.jar (no classifier)
-                        // If last part is version number (contains dots), it's main jar
-                        if (parts.length >= 2 && parts[parts.length - 1].match(/^\d+(\.\d+)*$/)) {
-                          return 2; // Main jar without classifier
-                        }
-                        
-                        // Check for common classifiers
                         if (name.includes('-sources.jar')) return 3;
                         if (name.includes('-javadoc.jar')) return 4;
-                        
-                        // Other jars with classifiers (native, linux, windows, etc.)
+                        // Other jars with classifiers
                         return 5;
                       }
                       
