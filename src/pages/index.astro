@@ -537,7 +537,7 @@ const githubRawUrlJson = JSON.stringify(githubRawUrl);
       if (!activeTab) return;
       
       const tabName = activeTab.textContent.trim();
-      const codeBlock = document.querySelector('.code-block pre');
+      const codeBlock = document.querySelector('#code-content');
       if (!codeBlock) return;
       
       let code = '';
@@ -588,6 +588,49 @@ const githubRawUrlJson = JSON.stringify(githubRawUrl);
       });
     }
 
+    // Copy to clipboard
+    function setupCopyButton() {
+      const copyBtn = document.getElementById('copy-btn');
+      if (!copyBtn) return;
+
+      copyBtn.addEventListener('click', async () => {
+        const codeContent = document.getElementById('code-content');
+        if (!codeContent) return;
+
+        // Get plain text content (remove HTML tags)
+        const text = codeContent.textContent || '';
+        
+        try {
+          await navigator.clipboard.writeText(text);
+          // Show feedback
+          const originalText = copyBtn.textContent;
+          copyBtn.textContent = '✅';
+          setTimeout(() => {
+            copyBtn.textContent = originalText;
+          }, 1500);
+        } catch (err) {
+          console.error('Failed to copy:', err);
+          // Fallback for older browsers
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand('copy');
+            copyBtn.textContent = '✅';
+            setTimeout(() => {
+              copyBtn.textContent = originalText;
+            }, 1500);
+          } catch (e) {
+            console.error('Fallback copy failed:', e);
+          }
+          document.body.removeChild(textarea);
+        }
+      });
+    }
+
     // Handle hash changes
     window.addEventListener('hashchange', async () => {
       const hash = window.location.hash.slice(1);
@@ -598,6 +641,7 @@ const githubRawUrlJson = JSON.stringify(githubRawUrl);
     // Initialize
     window.addEventListener('DOMContentLoaded', async () => {
       setupTabs();
+      setupCopyButton();
       updateCodeBlock(); // 立即渲染初始代码块
       
       // Load tree data first
@@ -642,7 +686,7 @@ const githubRawUrlJson = JSON.stringify(githubRawUrl);
         <aside class="artifact-card">
           <div class="card-title">
             <span>Repository details</span>
-            <span style="cursor: pointer;">📋</span>
+            <span id="copy-btn" style="cursor: pointer;" title="Copy to clipboard">📋</span>
           </div>
           
           <div class="card-tabs">
@@ -652,7 +696,7 @@ const githubRawUrlJson = JSON.stringify(githubRawUrl);
           </div>
 
           <div class="code-block">
-            <pre></pre>
+            <pre id="code-content"></pre>
           </div>
         </aside>
       </div>
