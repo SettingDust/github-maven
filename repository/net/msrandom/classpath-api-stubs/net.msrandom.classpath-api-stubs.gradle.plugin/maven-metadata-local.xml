@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>net.msrandom.classpath-api-stubs</groupId>
+  <artifactId>net.msrandom.classpath-api-stubs.gradle.plugin</artifactId>
+  <versioning>
+    <latest>0.1.12-dust</latest>
+    <release>0.1.12-dust</release>
+    <versions>
+      <version>0.1.12-dust</version>
+    </versions>
+    <lastUpdated>20260117185846</lastUpdated>
+  </versioning>
+</metadata>
