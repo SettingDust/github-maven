@@ -3,12 +3,12 @@
   <groupId>net.msrandom</groupId>
   <artifactId>minecraft-codev-forge</artifactId>
   <versioning>
-    <latest>0.7.2-dust</latest>
-    <release>0.7.2-dust</release>
+    <latest>0.7.4-dust</latest>
+    <release>0.7.4-dust</release>
     <versions>
       <version>0.7.1-dust</version>
-      <version>0.7.2-dust</version>
+      <version>0.7.4-dust</version>
     </versions>
-    <lastUpdated>20260117191054</lastUpdated>
+    <lastUpdated>20260118044538</lastUpdated>
   </versioning>
 </metadata>
