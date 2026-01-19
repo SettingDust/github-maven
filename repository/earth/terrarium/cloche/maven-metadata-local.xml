@@ -3,11 +3,11 @@
   <groupId>earth.terrarium</groupId>
   <artifactId>cloche</artifactId>
   <versioning>
-    <latest>0.17.6-dust.0</latest>
-    <release>0.17.6-dust.0</release>
+    <latest>0.17.7-dust</latest>
+    <release>0.17.7-dust</release>
     <versions>
-      <version>0.17.6-dust.0</version>
+      <version>0.17.7-dust</version>
     </versions>
-    <lastUpdated>20260118052419</lastUpdated>
+    <lastUpdated>20260119170512</lastUpdated>
   </versioning>
 </metadata>
