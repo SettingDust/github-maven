@@ -3,7 +3,7 @@
   "component": {
     "group": "net.msrandom",
     "module": "minecraft-codev-fabric",
-    "version": "0.6.11-dust",
+    "version": "0.6.11-dust.0",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -27,13 +27,13 @@
       },
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "size": 134794,
-          "sha512": "302829954495ea09513b61b25cf06657108cb9ffb54fa3353dffb1e08281829244a8032b296261b1600f78613d9ee9b308642715afaf2c5978f8dbd631c01227",
-          "sha256": "0c880a49ba8b6174b2dac8d15f817187424afdd6be93522157949a7fb51cb37d",
-          "sha1": "bad1fc413c207ce9e2327555babd930f15c5eb61",
-          "md5": "ce18cd55b6ba132aac7eeb734d7cbda0"
+          "name": "minecraft-codev-fabric-0.6.11-dust.0.jar",
+          "url": "minecraft-codev-fabric-0.6.11-dust.0.jar",
+          "size": 134898,
+          "sha512": "a26598a0456bbc7ced0aaef610e5d27b7e947b4873b357cae702f993a9877703a0c0f31bf257fd4387286a2c50ef19565dae8930fc8459bfc20bd3ce434d5f2a",
+          "sha256": "fbe6748f87f6ce70ec6d354d96789b2d47622c045d0e54e4a769c0a18b3f2f76",
+          "sha1": "5cf063397ee047fb95780602307615201d093046",
+          "md5": "3f5784a61f032ff5ab071dcd61aa8c05"
         }
       ]
     },
@@ -57,14 +57,14 @@
           "group": "net.msrandom",
           "module": "minecraft-codev-access-widener",
           "version": {
-            "requires": "0.6.0"
+            "requires": "0.6.0-dust.0"
           }
         },
         {
           "group": "net.msrandom",
           "module": "minecraft-codev-remapper",
           "version": {
-            "requires": "0.6.8-dust"
+            "requires": "0.6.8-dust.0"
           }
         },
         {
@@ -100,13 +100,13 @@
       ],
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "size": 134794,
-          "sha512": "302829954495ea09513b61b25cf06657108cb9ffb54fa3353dffb1e08281829244a8032b296261b1600f78613d9ee9b308642715afaf2c5978f8dbd631c01227",
-          "sha256": "0c880a49ba8b6174b2dac8d15f817187424afdd6be93522157949a7fb51cb37d",
-          "sha1": "bad1fc413c207ce9e2327555babd930f15c5eb61",
-          "md5": "ce18cd55b6ba132aac7eeb734d7cbda0"
+          "name": "minecraft-codev-fabric-0.6.11-dust.0.jar",
+          "url": "minecraft-codev-fabric-0.6.11-dust.0.jar",
+          "size": 134898,
+          "sha512": "a26598a0456bbc7ced0aaef610e5d27b7e947b4873b357cae702f993a9877703a0c0f31bf257fd4387286a2c50ef19565dae8930fc8459bfc20bd3ce434d5f2a",
+          "sha256": "fbe6748f87f6ce70ec6d354d96789b2d47622c045d0e54e4a769c0a18b3f2f76",
+          "sha1": "5cf063397ee047fb95780602307615201d093046",
+          "md5": "3f5784a61f032ff5ab071dcd61aa8c05"
         }
       ]
     },
@@ -120,13 +120,13 @@
       },
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust-sources.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust-sources.jar",
-          "size": 17063,
-          "sha512": "82cc2c35b28aa12b5fd419063a1ab0222b197ec5b57c20901ad7789fce30b88610fd357152ab0316ae2875fa3aa910ee45a0f7af81b7cd6455afd5bd9e84852f",
-          "sha256": "08f2529f4b7b0d71428cc96a61e3d01d662b93d047ed2809e2dc317b4024839f",
-          "sha1": "5fac1c1e3609ee4155459ce58d2725232c1e44d4",
-          "md5": "c68690545ec4c202e6e81c55ef90535b"
+          "name": "minecraft-codev-fabric-0.6.11-dust.0-sources.jar",
+          "url": "minecraft-codev-fabric-0.6.11-dust.0-sources.jar",
+          "size": 17154,
+          "sha512": "6b06925f4d071b3699c398de38f0419c83920e6d21e6aaba1c1722c6b2ee42d4330f3fd8d87d2190c3007ef75c6756b8163caa74c78801ce9c4883c5c605effa",
+          "sha256": "4fb626b8862bd2c9392fe11070d1c2fc338a580bfef8772893f3683ec5d93580",
+          "sha1": "6f5c8d9bee83833d5c2196aa7d77b796af8ec777",
+          "md5": "c8e71c5081fea36801ef001426abb28d"
         }
       ]
     },
@@ -140,8 +140,8 @@
       },
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust-javadoc.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust-javadoc.jar",
+          "name": "minecraft-codev-fabric-0.6.11-dust.0-javadoc.jar",
+          "url": "minecraft-codev-fabric-0.6.11-dust.0-javadoc.jar",
           "size": 261,
           "sha512": "1487e5a20c9e4d74f298e07c42e96a61be11b7a768c3fbc199ee138cd68e1fc2267d1cfe3f11f288acc05df755315344d052cc5f6f751f126ab4fe1caa5125ea",
           "sha256": "c6deada2fac53b8ea6523dbda77597b128006674616f140f04df23264c6d1aa3",

@@ -2,8 +2,8 @@
   "formatVersion": "1.1",
   "component": {
     "group": "net.msrandom",
-    "module": "minecraft-codev-fabric",
-    "version": "0.6.11-dust",
+    "module": "minecraft-codev-access-widener",
+    "version": "0.6.0-dust.0",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -25,15 +25,31 @@
         "org.gradle.usage": "java-api",
         "org.jetbrains.kotlin.platform.type": "jvm"
       },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "class-tweaker",
+          "version": {
+            "requires": "0.2"
+          }
+        },
+        {
+          "group": "org.cadixdev",
+          "module": "at",
+          "version": {
+            "requires": "0.1.0-rc1"
+          }
+        }
+      ],
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "size": 134794,
-          "sha512": "302829954495ea09513b61b25cf06657108cb9ffb54fa3353dffb1e08281829244a8032b296261b1600f78613d9ee9b308642715afaf2c5978f8dbd631c01227",
-          "sha256": "0c880a49ba8b6174b2dac8d15f817187424afdd6be93522157949a7fb51cb37d",
-          "sha1": "bad1fc413c207ce9e2327555babd930f15c5eb61",
-          "md5": "ce18cd55b6ba132aac7eeb734d7cbda0"
+          "name": "minecraft-codev-access-widener-0.6.0-dust.0.jar",
+          "url": "minecraft-codev-access-widener-0.6.0-dust.0.jar",
+          "size": 77848,
+          "sha512": "c0150710efa91db005abd6ce6c2c318541b1c880cc0cdb27ad27384df557be1bd1dd847e2ec15b768c8c0f3f659d41adeb4f293df766d9978ad4112d04826a62",
+          "sha256": "9b6df31c50b944d0321256887766c8458e6da533900ed6a0c2285a40960a93ab",
+          "sha1": "88c1b1fa6375ee7283cf40862ff383a354fec8dd",
+          "md5": "386208659afe56410a2383bf83c72bb2"
         }
       ]
     },
@@ -55,37 +71,23 @@
         },
         {
           "group": "net.msrandom",
-          "module": "minecraft-codev-access-widener",
+          "module": "minecraft-codev-core",
           "version": {
-            "requires": "0.6.0"
+            "requires": "0.6.6"
           }
         },
         {
-          "group": "net.msrandom",
-          "module": "minecraft-codev-remapper",
+          "group": "net.fabricmc",
+          "module": "class-tweaker",
           "version": {
-            "requires": "0.6.8-dust"
+            "requires": "0.2"
           }
         },
         {
-          "group": "net.msrandom",
-          "module": "minecraft-codev-mixins",
+          "group": "org.cadixdev",
+          "module": "at",
           "version": {
-            "requires": "0.6.0"
-          }
-        },
-        {
-          "group": "net.msrandom",
-          "module": "minecraft-codev-includes",
-          "version": {
-            "requires": "0.6.5-dust"
-          }
-        },
-        {
-          "group": "net.msrandom",
-          "module": "minecraft-codev-runs",
-          "version": {
-            "requires": "0.6.7"
+            "requires": "0.1.0-rc1"
           }
         }
       ],
@@ -100,13 +102,13 @@
       ],
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust.jar",
-          "size": 134794,
-          "sha512": "302829954495ea09513b61b25cf06657108cb9ffb54fa3353dffb1e08281829244a8032b296261b1600f78613d9ee9b308642715afaf2c5978f8dbd631c01227",
-          "sha256": "0c880a49ba8b6174b2dac8d15f817187424afdd6be93522157949a7fb51cb37d",
-          "sha1": "bad1fc413c207ce9e2327555babd930f15c5eb61",
-          "md5": "ce18cd55b6ba132aac7eeb734d7cbda0"
+          "name": "minecraft-codev-access-widener-0.6.0-dust.0.jar",
+          "url": "minecraft-codev-access-widener-0.6.0-dust.0.jar",
+          "size": 77848,
+          "sha512": "c0150710efa91db005abd6ce6c2c318541b1c880cc0cdb27ad27384df557be1bd1dd847e2ec15b768c8c0f3f659d41adeb4f293df766d9978ad4112d04826a62",
+          "sha256": "9b6df31c50b944d0321256887766c8458e6da533900ed6a0c2285a40960a93ab",
+          "sha1": "88c1b1fa6375ee7283cf40862ff383a354fec8dd",
+          "md5": "386208659afe56410a2383bf83c72bb2"
         }
       ]
     },
@@ -120,13 +122,13 @@
       },
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust-sources.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust-sources.jar",
-          "size": 17063,
-          "sha512": "82cc2c35b28aa12b5fd419063a1ab0222b197ec5b57c20901ad7789fce30b88610fd357152ab0316ae2875fa3aa910ee45a0f7af81b7cd6455afd5bd9e84852f",
-          "sha256": "08f2529f4b7b0d71428cc96a61e3d01d662b93d047ed2809e2dc317b4024839f",
-          "sha1": "5fac1c1e3609ee4155459ce58d2725232c1e44d4",
-          "md5": "c68690545ec4c202e6e81c55ef90535b"
+          "name": "minecraft-codev-access-widener-0.6.0-dust.0-sources.jar",
+          "url": "minecraft-codev-access-widener-0.6.0-dust.0-sources.jar",
+          "size": 7819,
+          "sha512": "3bf55c4263f50ec7a1c08a88cae324fb50634a27453a0625b99fc6aa5e31ca3f0412179b698f4cf5289d0ccd1161417c3758a84f785e4a122b623386fee94150",
+          "sha256": "79c059c8acb5949f16949c7d4e9925ca97d2c39fb123f26092d0165e9769137e",
+          "sha1": "d1dbdf3231f893b7966b0a2d64db9a092e33145f",
+          "md5": "c75a07d6dc6602b70374914ef5cb9c9a"
         }
       ]
     },
@@ -140,8 +142,8 @@
       },
       "files": [
         {
-          "name": "minecraft-codev-fabric-0.6.11-dust-javadoc.jar",
-          "url": "minecraft-codev-fabric-0.6.11-dust-javadoc.jar",
+          "name": "minecraft-codev-access-widener-0.6.0-dust.0-javadoc.jar",
+          "url": "minecraft-codev-access-widener-0.6.0-dust.0-javadoc.jar",
           "size": 261,
           "sha512": "1487e5a20c9e4d74f298e07c42e96a61be11b7a768c3fbc199ee138cd68e1fc2267d1cfe3f11f288acc05df755315344d052cc5f6f751f126ab4fe1caa5125ea",
           "sha256": "c6deada2fac53b8ea6523dbda77597b128006674616f140f04df23264c6d1aa3",
