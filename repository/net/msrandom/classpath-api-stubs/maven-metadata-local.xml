@@ -3,11 +3,11 @@
   <groupId>net.msrandom</groupId>
   <artifactId>classpath-api-stubs</artifactId>
   <versioning>
-    <latest>0.1.12-dust</latest>
-    <release>0.1.12-dust</release>
+    <latest>0.1.12-dust.0</latest>
+    <release>0.1.12-dust.0</release>
     <versions>
-      <version>0.1.12-dust</version>
+      <version>0.1.12-dust.0</version>
     </versions>
-    <lastUpdated>20260117185905</lastUpdated>
+    <lastUpdated>20260209054120</lastUpdated>
   </versioning>
 </metadata>
